@@ -1,0 +1,41 @@
+# This file exists so you can easily regenerate your project.
+#
+# `cookiepatcher` is a convenient shim around `cookiecutter`
+# for regenerating projects (it will generate a .cookiecutterrc
+# automatically for any template). To use it:
+#
+#    pip install cookiepatcher
+#    cookiepatcher gh:itisfoundation/cookiecutter-osparc-service project-path
+#
+# See:
+#    https://pypi.python.org/pypi/cookiepatcher
+#
+# Alternatively, you can run:
+#
+#    cookiecutter --overwrite-if-exists --config-file=project-path/.cookiecutterrc gh:itisfoundation/cookiecutter-osparc-service
+#
+
+default_context:
+
+    _checkout:                 None
+    _output_dir:               '/home/shailesh'
+    _repo_dir:                 '/home/shailesh/.cookiecutters/cookiecutter-osparc-service'
+    _template:                 'gh:ITISFoundation/cookiecutter-osparc-service'
+    author_affiliation:        'INT, Aix-Marseille University, France'
+    author_email:              'appukuttan.shailesh@gmail.com'
+    author_name:               'Shailesh Appukuttan'
+    contact_email:             'appukuttan.shailesh@gmail.com'
+    default_docker_registry:   'itisfoundation'
+    docker_base:               'python:3.11'
+    git_repo:                  'github'
+    git_username:              'appukuttan-shailesh'
+    number_of_inputs:          '2'
+    number_of_outputs:         '1'
+    project_name:              'File Format Converter'
+    project_package_name:      'file_format_converter'
+    project_short_description: 'Module to allow conversion of files between various formats such as CSV, JSON, YAML, XLS, XLSX, NWB'
+    project_slug:              'file-format-converter'
+    project_type:              'computational'
+    release_date:              '2024'
+    version:                   '0.1.0'
+    version_display:           '0.1.0'

@@ -1,0 +1,31 @@
+version: '3.7'
+services:
+  file-format-converter:
+    build:
+      context: ./
+      dockerfile: docker/python/Dockerfile
+      labels:
+        io.simcore.name: '{"name":"File Format Converter"}'
+        io.simcore.thumbnail: '{"thumbnail":"https://github.com/ITISFoundation/osparc-assets/blob/cb43207b6be2f4311c93cd963538d5718b41a023/assets/default-thumbnail-cookiecutter-osparc-service.png?raw=true"}'
+        io.simcore.description: '{"description":"Module to allow conversion of files
+          between various formats such as CSV, JSON, YAML, XLS, XLSX, NWB"}'
+        io.simcore.key: '{"key":"simcore/services/comp/file-format-converter"}'
+        io.simcore.version: '{"version":"0.1.0"}'
+        io.simcore.integration-version: '{"integration-version":"1.0.0"}'
+        io.simcore.type: '{"type":"computational"}'
+        io.simcore.authors: '{"authors":[{"name":"Shailesh Appukuttan","email":"appukuttan.shailesh@gmail.com","affiliation":"INT,
+          Aix-Marseille University, France"}]}'
+        io.simcore.contact: '{"contact":"appukuttan.shailesh@gmail.com"}'
+        io.simcore.inputs: '{"inputs":{"input_1":{"displayOrder":1.0,"label":"source
+          file","description":"path of file to be converted","type":"data:*/*"},"input_2":{"displayOrder":2.0,"label":"target
+          format","description":"required format of the output file","type":"ref_contentSchema","contentSchema":{"title":"target_format","default":"json","enum":["csv","json","yaml","xls","xlsx","nwb","parquet","feather","pkl","xml","toml","h5","hdf5"]}}}}'
+        io.simcore.outputs: '{"outputs":{"output_1":{"displayOrder":1.0,"label":"converted
+          file","description":"path to the converted file","type":"data:*/*","fileToKeyMap":{"data.json":"output_1"}}}}'
+        org.label-schema.build-date: 2024-08-11T20:55:08+0000
+        org.label-schema.schema-version: '1.0'
+        org.label-schema.vcs-ref: ''
+        org.label-schema.vcs-url: ''
+        simcore.service.restart-policy: no-restart
+        simcore.service.settings: '[{"name":"Resources","type":"Resources","value":{"Limits":{"NanoCPUs":1000000000,"MemoryBytes":2147483648}}}]'
+      target: production
+    image: simcore/services/comp/file-format-converter:0.1.0
