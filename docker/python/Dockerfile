@@ -97,7 +97,7 @@ ENV PATH="/home/${SC_USER_NAME}/service.cli:${PATH}"
 
 # copy binaries from build
 COPY --from=build --chown=${SC_USER_NAME}:${SC_USER_NAME} /build/bin file_format_converter
-RUN pip install --upgrade pip wheel setuptools pandas pyyaml h5py pyarrow toml xlrd==1.2.0
+RUN pip install --upgrade pip wheel setuptools pandas pyyaml h5py pyarrow toml xlrd==1.2.0 openpyxl
 
 # ------------------------------------------------------------------------------------
 #TODO:
