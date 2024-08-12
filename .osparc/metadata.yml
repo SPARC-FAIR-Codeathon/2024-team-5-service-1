@@ -33,5 +33,5 @@ outputs:
     description: path to the converted file
     type: data:*/*
     fileToKeyMap:
-      data.json: output_1
+      output.zip: output_1
   

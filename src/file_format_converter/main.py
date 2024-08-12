@@ -1,4 +1,6 @@
 import argparse
+import os
+import zipfile
 
 import pandas as pd
 import json
@@ -9,7 +11,6 @@ import pyarrow.feather as feather
 import pickle
 import xml.etree.ElementTree as ET
 import toml
-import os
 
 class FileConverter:
     def __init__(self, input_file):
@@ -108,9 +109,13 @@ class FileConverter:
         self.read_file()
         self.write_file(output_file)
         print(f"Converted {self.input_file} to {output_file} successfully.")
-        # write output file path to a file
-        with open('log_output_filepath.txt', 'w') as f:
-            f.write(output_file)
+        # now create a zip of the output file as output.zip
+        with zipfile.ZipFile('output.zip', 'w') as z:
+            z.write(output_file)
+        print(f"Zipped {output_file} to output.zip successfully.")
+        # # write output file path to a file
+        # with open('log_output_filepath.txt', 'w') as f:
+        #     f.write(output_file)
 
 # Example Usage
 if __name__ == "__main__":

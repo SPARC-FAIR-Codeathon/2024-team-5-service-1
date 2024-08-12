@@ -44,15 +44,17 @@ echo "PWD folder content:"
 ls -al
 
 # display the contents of log_output_filepath.txt
-echo "Content of log_output_filepath.txt:"
-echo "$(cat log_output_filepath.txt)"
+# echo "Content of log_output_filepath.txt:"
+# echo "$(cat log_output_filepath.txt)"
 
-cp "$(cat log_output_filepath.txt)" $OUTPUT_FOLDER
+# cp "$(cat log_output_filepath.txt)" $OUTPUT_FOLDER
 # echo "TEST DATA" > $OUTPUT_FOLDER/outputs.txt
 
+cp output.zip $OUTPUT_FOLDER
+
 #TODO: Replace following
-cat > "${OUTPUT_FOLDER}"/outputs.json << EOF
-{
-    "output_1":"$(cat log_output_filepath.txt)"
-}
-EOF
+# cat > "${OUTPUT_FOLDER}"/outputs.json << EOF
+# {
+#     "output_1":"$(cat log_output_filepath.txt)"
+# }
+# EOF
