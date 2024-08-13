@@ -1,30 +1,41 @@
-# 2024-team-5-service-1: file-format-converter
+# 2024-team-5- Service 1: File Format Converter
 
-Module to allow conversion of files between various formats such as CSV, JSON, YAML, XLS, XLSX, NWB
+![License Badge](https://img.shields.io/badge/license-MIT-blue.svg) ![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Version](https://img.shields.io/badge/version-0.1.0-blue) [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13308896.svg)](https://doi.org/10.5281/zenodo.13308896)
 
-## Usage
+This module is part of:
+<br/><br/>
+<a href="https://github.com/SPARC-FAIR-Codeathon/2024-team-5">
+<image src="https://github.com/appukuttan-shailesh/testData/blob/master/SPARC2024/oSPARCHub_logo.png?raw=true" height="200px" /></a>
+<br/><br/>
 
-```console
-$ make help
+This oSPARC service allows conversion of files between various formats such as CSV, JSON, YAML, XLS, XLSX, NWB (Neurodata Without Borders) and many others.
 
-$ make build
-$ make info-build
-$ make tests
+## Team #5 Repo
+
+The team's main repo is located at:
+https://github.com/SPARC-FAIR-Codeathon/2024-team-5
+
+## Base Package
+
+This oSPARC service was creating using [cookiecutter-osparc-service](
+https://github.com/ITISFoundation/cookiecutter-osparc-service).
+
+
+## Deployment Status
+
+This service is awaiting deployment to oSPARC production. The GitHub actions fail, as we do not have the required permissions for the `build` stage:
+
+> /home/scu/.venv/bin/python3: can't open file '/home/scu/.venv/bin/ooil': [Errno 13] Permission denied
+
+Service has been deployed and tested locally via:
+```
+make publish-local
 ```
 
-## Workflow
+## Citation
 
-1. The source code shall be copied to the [src](file-format-converter/src/file_format_converter) folder.
-2. The [Dockerfile](file-format-converter/src/Dockerfile) shall be modified to compile the source code.
-3. The [.osparc](.osparc) is the configuration folder and source of truth for metadata: describes service info and expected inputs/outputs of the service.
-4. The [execute](file-format-converter/service.cli/execute) shell script shall be modified to run the service using the expected inputs and retrieve the expected outputs.
-5. The test input/output shall be copied to [validation](file-format-converter/validation).
-6. The service docker image may be built and tested as ``make build tests`` (see usage above)
-7. Optional: if your code requires specific CPU/RAM resources, edit [runtime.yml](.osparc/runtime.yml). In doubt, leave it as default.
+Appukuttan, S., Benaribi, H., & Rievers, F. (2024). oSPARC Service #1: File Format Converter. Zenodo. https://doi.org/10.5281/zenodo.13308896
+
 
 ## Have an issue or question?
-Please open an issue [in this repository](https://github.com/ITISFoundation/cookiecutter-osparc-service/issues/).
----
-<p align="center">
-<image src="https://github.com/ITISFoundation/osparc-simcore-python-client/blob/4e8b18494f3191d55f6692a6a605818aeeb83f95/docs/_media/mwl.png" alt="Made with love at www.z43.swiss" width="20%" />
-</p>
+Please open an issue [here](https://github.com/SPARC-FAIR-Codeathon/2024-team-5-service-1/issues).
