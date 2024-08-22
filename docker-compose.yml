@@ -21,7 +21,7 @@ services:
           format","description":"required format of the output file","type":"ref_contentSchema","contentSchema":{"title":"target_format","default":"json","enum":["csv","json","yaml","xls","xlsx","nwb","parquet","feather","pkl","xml","toml","h5","hdf5"]}}}}'
         io.simcore.outputs: '{"outputs":{"output_1":{"displayOrder":1.0,"label":"converted
           file","description":"path to the converted file","type":"data:*/*","fileToKeyMap":{"output.zip":"output_1"}}}}'
-        org.label-schema.build-date: 2024-08-20T14:31:12+0000
+        org.label-schema.build-date: 2024-08-22T09:22:33+0000
         org.label-schema.schema-version: '1.0'
         org.label-schema.vcs-ref: ''
         org.label-schema.vcs-url: ''
