@@ -6,7 +6,7 @@ FROM python:3.11 as base
 #     docker run file-format-converter:prod
 #
 
-LABEL maintainer=appukuttan-shailesh
+LABEL maintainer=ordonez
 
 # simcore-user uid=8004(${SC_USER_NAME}) gid=8004(${SC_USER_NAME}) groups=8004(${SC_USER_NAME})
 ENV SC_USER_ID 8004
